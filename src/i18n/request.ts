@@ -12,7 +12,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     console.log(`[RequestConfig] Loading messages for locale: ${locale}`);
 
     try {
-        let messages;
+        let messages: any;
         switch (locale) {
             case 'zh':
                 messages = {
