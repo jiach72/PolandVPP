@@ -48,7 +48,7 @@ export default function GenerationMixChart() {
                     <Tooltip
                         contentStyle={{ backgroundColor: '#1e293b', borderColor: '#334155', color: '#f8fafc' }}
                         itemStyle={{ color: '#f8fafc' }}
-                        formatter={(value: number) => [`${value}%`, 'Share']}
+                        formatter={(value: any) => [`${value}%`, 'Share']}
                     />
                     <Legend iconType="circle" />
                 </PieChart>
