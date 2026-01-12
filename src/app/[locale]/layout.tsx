@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     description: "Virtual Power Plant Platform for Polish Power Grid",
 };
 
-export const runtime = 'edge';
+// Remove edge runtime - Vercel uses Node.js by default which supports next-intl
 
 export default async function LocaleLayout({
     children,
