@@ -210,7 +210,7 @@ export function BiddingWidget({ initialBids }: { initialBids: Bid[] }) {
 
     return (
         <>
-            <div className="p-6 rounded-xl bg-slate-800/50 border border-slate-700/50">
+            <div className="p-6 rounded-xl bg-slate-900/60 backdrop-blur-md border border-white/5 shadow-xl h-full">
                 <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-semibold text-white">{t('bidding.myBids')}</h3>
                     <button

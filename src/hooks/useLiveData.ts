@@ -1,42 +1,79 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { useAppStore, Alert } from '@/store/useAppStore';
+import { toast } from 'sonner';
 
 // 辅助函数：生成带波动的随机数
-// value: 基准值, range: 波动范围百分比 (例如 0.02 表示 ±2%)
 function fluctuate(baseValue: number, fluctuationRange: number = 0.01) {
     const delta = baseValue * fluctuationRange;
     const change = (Math.random() - 0.5) * 2 * delta;
     return baseValue + change;
 }
 
+const ALERT_MESSAGES = [
+    { level: 'warning', msg: 'Grid Frequency Deviation High (>50.05Hz)' },
+    { level: 'critical', msg: 'Asset Link Lost: Wind Farm Kraków' },
+    { level: 'info', msg: 'New Dispatch Order Received' },
+    { level: 'warning', msg: 'Voltage Sag Detected in Region B' },
+    { level: 'info', msg: 'Market Price Updated' },
+    { level: 'critical', msg: 'Inverter Communication Failure: PV Warsaw' },
+];
+
 export function useLiveData() {
-    // 初始基准值
-    const [data, setData] = useState({
-        totalCapacity: 1250,
-        activeAssets: 2847,
-        upRegulation: 320,
-        downRegulation: 185,
-        marketPrice: 487.50,
-        avgPrice: 465.20,
-        maxPrice: 512.00,
-        minPrice: 398.50,
-    });
+    const {
+        totalCapacity, activeAssets, upRegulation, downRegulation,
+        marketPrice, avgPrice, maxPrice, minPrice,
+        updateSimulation, addAlert
+    } = useAppStore();
 
     useEffect(() => {
+        // 1. Simulation Loop (Data updates)
         const interval = setInterval(() => {
-            setData(prev => ({
-                totalCapacity: 1250, // 容量通常固定，或者是由于 asset 上下线缓慢变化，这里暂定固定
-                activeAssets: Math.floor(fluctuate(2847, 0.005)), // 资产数量偶尔变动
-                upRegulation: fluctuate(320, 0.05), // 调节量波动较大
+            updateSimulation({
+                totalCapacity: 1250,
+                activeAssets: Math.floor(fluctuate(2847, 0.005)),
+                upRegulation: fluctuate(320, 0.05),
                 downRegulation: fluctuate(185, 0.05),
-                marketPrice: fluctuate(487.50, 0.02), // 价格微小波动
+                marketPrice: fluctuate(487.50, 0.02),
                 avgPrice: 465.20,
                 maxPrice: 512.00,
                 minPrice: 398.50,
-            }));
-        }, 2000); // 2秒刷新一次
+            });
+        }, 2000);
 
-        return () => clearInterval(interval);
+        // 2. Alarm Generator Loop (Random alerts)
+        const alarmInterval = setInterval(() => {
+            // 20% chance to generate an alert every 5 seconds
+            if (Math.random() > 0.8) {
+                const template = ALERT_MESSAGES[Math.floor(Math.random() * ALERT_MESSAGES.length)];
+                const newAlert: Alert = {
+                    id: Math.random().toString(36).substr(2, 9),
+                    level: template.level as any,
+                    message: template.msg,
+                    time: new Date().toLocaleTimeString('en-GB')
+                };
+
+                addAlert(newAlert);
+
+                // Trigger Toast
+                if (template.level === 'critical') {
+                    toast.error(newAlert.message, { description: newAlert.time });
+                } else if (template.level === 'warning') {
+                    toast.warning(newAlert.message, { description: newAlert.time });
+                } else {
+                    toast.info(newAlert.message, { description: newAlert.time });
+                }
+            }
+        }, 5000);
+
+        return () => {
+            clearInterval(interval);
+            clearInterval(alarmInterval);
+        };
     }, []);
 
-    return data;
+    // Return the store state directly for compatibility with components using this hook
+    return {
+        totalCapacity, activeAssets, upRegulation, downRegulation,
+        marketPrice, avgPrice, maxPrice, minPrice
+    };
 }

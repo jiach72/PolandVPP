@@ -5,6 +5,7 @@ import { routing } from '@/i18n/config';
 import type { Metadata } from "next";
 // import localFont from "next/font/local"; // 假设之前没有用 localFont 或者用了默认的 global.css
 import "../globals.css"; // 确保引入全局样式
+import { Toaster } from 'sonner';
 
 // const geistSans = localFont({
 //   src: "../fonts/GeistVF.woff",
@@ -45,6 +46,9 @@ export default async function LocaleLayout({
             <body
                 className={`bg-slate-900 text-slate-100 antialiased`}
             >
+                <div className='relative z-[50]'>
+                    <Toaster position="top-right" theme="dark" richColors />
+                </div>
                 <NextIntlClientProvider messages={messages}>
                     {children}
                 </NextIntlClientProvider>

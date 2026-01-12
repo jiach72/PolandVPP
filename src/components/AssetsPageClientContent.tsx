@@ -110,7 +110,7 @@ export default function AssetsPageClientContent({ initialAssets }: { initialAsse
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
                     {/* 左侧：统计数据 */}
                     <div className="grid grid-cols-2 gap-4">
-                        <div className="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50">
+                        <div className="p-4 rounded-xl bg-slate-900/60 backdrop-blur-md border border-white/5">
                             <p className="text-sm text-slate-400">{t('details.totalAssets')}</p>
                             <p className="text-2xl font-bold text-white">{initialAssets.length}</p>
                         </div>
@@ -129,7 +129,7 @@ export default function AssetsPageClientContent({ initialAssets }: { initialAsse
                     </div>
 
                     {/* 右侧：发电组合饼图 */}
-                    <div className="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 flex flex-col">
+                    <div className="p-4 rounded-xl bg-slate-900/60 backdrop-blur-md border border-white/5 flex flex-col shadow-lg">
                         <h3 className="text-sm font-semibold text-white mb-2 ml-1">Energy Mix</h3>
                         <div className="flex-1 min-h-[200px] relative">
                             <GenerationMixWrapper />
@@ -138,10 +138,10 @@ export default function AssetsPageClientContent({ initialAssets }: { initialAsse
                 </div>
 
                 {/* 资产列表 */}
-                <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl overflow-hidden">
+                <div className="bg-slate-900/60 backdrop-blur-md border border-white/5 rounded-xl overflow-hidden shadow-2xl">
                     <div className="overflow-x-auto">
                         <table className="w-full">
-                            <thead className="bg-slate-800/80">
+                            <thead className="bg-slate-900/80">
                                 <tr>
                                     <th className="px-6 py-4 text-left text-xs font-medium text-slate-400 uppercase tracking-wider">ID</th>
                                     <th className="px-6 py-4 text-left text-xs font-medium text-slate-400 uppercase tracking-wider">{t('form.name')}</th>

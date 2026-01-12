@@ -19,7 +19,7 @@ export function StatCard({ title, value, unit, trend, icon, color = 'blue' }: an
     };
 
     return (
-        <div className={`p-6 rounded-xl bg-gradient-to-br ${colorClasses[color]} border`}>
+        <div className={`p-6 rounded-xl bg-gradient-to-br ${colorClasses[color]} border backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]`}>
             <div className="flex items-start justify-between mb-2">
                 <p className={`text-sm ${colorClasses[color].split(' ')[3]}`}>{title}</p>
                 {icon && <div className="opacity-50">{icon}</div>}
@@ -77,7 +77,7 @@ export function AlertList({ alerts }: { alerts: Array<{ id: string; level: 'crit
 
     if (alerts.length === 0) {
         return (
-            <div className="p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 text-center">
+            <div className="p-6 rounded-xl bg-slate-900/40 backdrop-blur-md border border-white/5 text-center">
                 <svg className="w-12 h-12 mx-auto text-slate-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -89,15 +89,12 @@ export function AlertList({ alerts }: { alerts: Array<{ id: string; level: 'crit
     return (
         <div className="space-y-3">
             {alerts.map((alert) => (
-                <div key={alert.id} className={`p-4 rounded-lg ${levelClasses[alert.level]} border flex items-start gap-3`}>
+                <div key={alert.id} className={`p-4 rounded-lg ${levelClasses[alert.level]} border flex items-start gap-3 backdrop-blur-sm transition-all hover:bg-opacity-20`}>
                     {levelIcons[alert.level]}
                     <div className="flex-1 min-w-0">
-                        <p className="text-sm text-white">{alert.message}</p>
+                        <p className="text-sm text-white font-medium">{alert.message}</p>
                         <p className="text-xs text-slate-400 mt-1">{alert.time}</p>
                     </div>
-                    <button className="text-xs px-2 py-1 rounded bg-white/10 hover:bg-white/20 transition-colors cursor-pointer">
-                        {t('alerts.acknowledge')}
-                    </button>
                 </div>
             ))}
         </div>
