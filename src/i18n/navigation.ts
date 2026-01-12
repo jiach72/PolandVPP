@@ -1,3 +1,5 @@
+'use client';
+
 // Simple navigation without next-intl/navigation dependency
 import NextLink from 'next/link';
 import { useRouter as useNextRouter, usePathname as useNextPathname } from 'next/navigation';
