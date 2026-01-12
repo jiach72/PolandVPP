@@ -1,9 +1,17 @@
-import createMiddleware from 'next-intl/middleware';
-import { routing } from './i18n/config';
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
-export default createMiddleware(routing);
+export function middleware(request: NextRequest) {
+    const pathname = request.nextUrl.pathname;
+
+    // If accessing root, redirect to default locale
+    if (pathname === '/') {
+        return NextResponse.redirect(new URL('/pl', request.url));
+    }
+
+    return NextResponse.next();
+}
 
 export const config = {
-    // Match only internationalized pathnames
-    matcher: ['/', '/(pl|en|zh)/:path*']
+    matcher: ['/']
 };
