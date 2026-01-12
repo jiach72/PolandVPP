@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     description: "Virtual Power Plant Platform for Polish Power Grid",
 };
 
+export const runtime = 'edge';
+
 export default async function LocaleLayout({
     children,
     params
