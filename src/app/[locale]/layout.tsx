@@ -1,22 +1,9 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/config';
 import type { Metadata } from "next";
-// import localFont from "next/font/local"; // 假设之前没有用 localFont 或者用了默认的 global.css
-import "../globals.css"; // 确保引入全局样式
+import "../globals.css";
 import { Toaster } from 'sonner';
-
-// const geistSans = localFont({
-//   src: "../fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "../fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
 
 export const metadata: Metadata = {
     title: "PSE NextGen VPP Platform",
@@ -24,6 +11,40 @@ export const metadata: Metadata = {
 };
 
 export const runtime = 'edge';
+
+// Static message loader for Edge Runtime compatibility
+async function loadMessages(locale: string) {
+    switch (locale) {
+        case 'zh':
+            return {
+                common: (await import('../../../messages/zh/common.json')).default,
+                dashboard: (await import('../../../messages/zh/dashboard.json')).default,
+                assets: (await import('../../../messages/zh/assets.json')).default,
+                market: (await import('../../../messages/zh/market.json')).default,
+                dispatch: (await import('../../../messages/zh/dispatch.json')).default,
+                settlement: (await import('../../../messages/zh/settlement.json')).default,
+            };
+        case 'pl':
+            return {
+                common: (await import('../../../messages/pl/common.json')).default,
+                dashboard: (await import('../../../messages/pl/dashboard.json')).default,
+                assets: (await import('../../../messages/pl/assets.json')).default,
+                market: (await import('../../../messages/pl/market.json')).default,
+                dispatch: (await import('../../../messages/pl/dispatch.json')).default,
+                settlement: (await import('../../../messages/pl/settlement.json')).default,
+            };
+        case 'en':
+        default:
+            return {
+                common: (await import('../../../messages/en/common.json')).default,
+                dashboard: (await import('../../../messages/en/dashboard.json')).default,
+                assets: (await import('../../../messages/en/assets.json')).default,
+                market: (await import('../../../messages/en/market.json')).default,
+                dispatch: (await import('../../../messages/en/dispatch.json')).default,
+                settlement: (await import('../../../messages/en/settlement.json')).default,
+            };
+    }
+}
 
 export default async function LocaleLayout({
     children,
@@ -39,9 +60,8 @@ export default async function LocaleLayout({
         notFound();
     }
 
-    // Providing all messages to the client
-    // side is the easiest way to get started
-    const messages = await getMessages();
+    // Load messages directly for Edge Runtime compatibility
+    const messages = await loadMessages(locale);
 
     return (
         <html lang={locale}>
@@ -51,10 +71,11 @@ export default async function LocaleLayout({
                 <div className='relative z-[50]'>
                     <Toaster position="top-right" theme="dark" richColors />
                 </div>
-                <NextIntlClientProvider messages={messages}>
+                <NextIntlClientProvider messages={messages} locale={locale}>
                     {children}
                 </NextIntlClientProvider>
             </body>
         </html>
     );
 }
+
