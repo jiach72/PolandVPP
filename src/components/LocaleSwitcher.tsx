@@ -34,13 +34,7 @@ export default function LocaleSwitcher() {
 
     function handleLocaleChange(newLocale: Locale) {
         startTransition(() => {
-            // Construct new path: replace current locale with new locale
-            const segments = pathname.split('/');
-            if (segments[1] && ['pl', 'en', 'zh'].includes(segments[1])) {
-                segments[1] = newLocale;
-            }
-            const newPath = segments.join('/') || `/${newLocale}`;
-            router.replace(newPath);
+            router.replace(pathname, { locale: newLocale });
             setIsOpen(false);
         });
     }
