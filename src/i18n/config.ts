@@ -56,3 +56,5 @@ export const namespaces = [
 ] as const;
 
 export type Namespace = (typeof namespaces)[number];
+
+export const localeNames = localeConfig;
