@@ -1,0 +1,83 @@
+{
+    "title": "Panel operatora VPP",
+    "subtitle": "Przegląd systemu w czasie rzeczywistym",
+    "welcome": "Witaj, {name}",
+    "overview": {
+        "title": "Przegląd systemu",
+        "totalCapacity": "Całkowita moc",
+        "availableCapacity": "Dostępna regulacja",
+        "upRegulation": "Regulacja w górę",
+        "downRegulation": "Regulacja w dół",
+        "activeAssets": "Aktywne zasoby",
+        "totalAssets": "Wszystkie zasoby",
+        "currentGeneration": "Bieżąca generacja",
+        "currentLoad": "Bieżące obciążenie"
+    },
+    "frequency": {
+        "title": "Częstotliwość systemu",
+        "current": "Aktualna częstotliwość",
+        "target": "Częstotliwość docelowa",
+        "deviation": "Odchylenie",
+        "normal": "Normalna",
+        "warning": "Ostrzeżenie",
+        "critical": "Krytyczna"
+    },
+    "alerts": {
+        "title": "Aktywne alarmy",
+        "noAlerts": "Brak aktywnych alarmów",
+        "critical": "Krytyczny",
+        "warning": "Ostrzeżenie",
+        "info": "Informacja",
+        "acknowledge": "Potwierdź",
+        "details": "Szczegóły",
+        "time": "Czas"
+    },
+    "events": {
+        "title": "Ostatnie zdarzenia",
+        "noEvents": "Brak zdarzeń",
+        "viewAll": "Zobacz wszystkie",
+        "dispatchReceived": "Otrzymano polecenie dyspozytorskie",
+        "assetConnected": "Zasób połączony",
+        "assetDisconnected": "Zasób rozłączony",
+        "bidAccepted": "Oferta zaakceptowana",
+        "bidRejected": "Oferta odrzucona"
+    },
+    "map": {
+        "title": "Mapa zasobów rozproszonej energetyki",
+        "legend": "Legenda",
+        "wojewodztwo": "Województwo",
+        "zoom": "Powiększ",
+        "assets": {
+            "solar": "Fotowoltaika",
+            "wind": "Elektrownia wiatrowa",
+            "battery": "Magazyn energii",
+            "ev": "Stacje ładowania EV",
+            "industrial": "Obciążenie przemysłowe"
+        }
+    },
+    "forecast": {
+        "title": "Prognoza energetyczna",
+        "next24h": "Następne 24 godziny",
+        "next48h": "Następne 48 godzin",
+        "generation": "Generacja",
+        "load": "Obciążenie",
+        "net": "Bilans netto",
+        "confidence": "Poziom pewności"
+    },
+    "market": {
+        "title": "Podsumowanie rynku",
+        "currentPrice": "Aktualna cena",
+        "avgPrice": "Średnia cena",
+        "maxPrice": "Cena maksymalna",
+        "minPrice": "Cena minimalna",
+        "volume": "Wolumen",
+        "trend": "Trend"
+    },
+    "kpi": {
+        "title": "Wskaźniki KPI",
+        "availability": "Dostępność",
+        "responseTime": "Czas odpowiedzi",
+        "accuracy": "Dokładność prognozy",
+        "compliance": "Zgodność z przepisami"
+    }
+}

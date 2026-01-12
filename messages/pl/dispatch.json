@@ -1,0 +1,78 @@
+{
+    "title": "Centrum dyspozytorskie",
+    "subtitle": "Sterowanie i kontrola zasobów VPP",
+    "control": {
+        "title": "Sterowanie",
+        "mode": {
+            "title": "Tryb sterowania",
+            "auto": "Automatyczny (AGC)",
+            "manual": "Ręczny",
+            "priceSignal": "Sygnał cenowy"
+        },
+        "setpoint": "Punkt nastawy",
+        "currentOutput": "Aktualna moc wyjściowa",
+        "targetOutput": "Docelowa moc wyjściowa",
+        "rampRate": "Szybkość zmiany"
+    },
+    "agc": {
+        "title": "Automatyczna Regulacja Generacji (AGC)",
+        "status": "Status AGC",
+        "enabled": "Włączony",
+        "disabled": "Wyłączony",
+        "regulationSignal": "Sygnał regulacyjny",
+        "basepoint": "Punkt bazowy",
+        "deviation": "Odchylenie",
+        "responseTime": "Czas odpowiedzi"
+    },
+    "dispatch": {
+        "title": "Polecenia dyspozytorskie",
+        "incoming": "Przychodzące",
+        "outgoing": "Wychodzące",
+        "history": "Historia",
+        "source": "Źródło",
+        "target": "Cel",
+        "command": "Polecenie",
+        "timestamp": "Znacznik czasu",
+        "status": {
+            "received": "Odebrano",
+            "acknowledged": "Potwierdzono",
+            "executing": "Wykonywanie",
+            "completed": "Zakończono",
+            "failed": "Niepowodzenie"
+        }
+    },
+    "constraints": {
+        "title": "Ograniczenia",
+        "dso": "Ograniczenia DSO",
+        "voltage": "Limity napięcia",
+        "thermal": "Limity termiczne",
+        "trafficLight": {
+            "title": "System sygnalizacji",
+            "green": "Zielony - brak ograniczeń",
+            "yellow": "Żółty - możliwe ograniczenia",
+            "red": "Czerwony - wymagana interwencja"
+        }
+    },
+    "assets": {
+        "title": "Zasoby pod kontrolą",
+        "select": "Wybierz zasób",
+        "selectAll": "Wybierz wszystkie",
+        "deselectAll": "Odznacz wszystkie",
+        "groupControl": "Sterowanie grupowe"
+    },
+    "emergency": {
+        "title": "Tryb awaryjny",
+        "activate": "Aktywuj tryb awaryjny",
+        "deactivate": "Dezaktywuj tryb awaryjny",
+        "warning": "Ostrzeżenie: Aktywacja trybu awaryjnego wyłączy wszystkie zasoby",
+        "confirm": "Czy na pewno chcesz aktywować tryb awaryjny?"
+    },
+    "schedule": {
+        "title": "Harmonogram",
+        "today": "Dzisiaj",
+        "tomorrow": "Jutro",
+        "week": "Ten tydzień",
+        "planned": "Zaplanowane",
+        "executed": "Wykonane"
+    }
+}

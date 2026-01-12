@@ -1,0 +1,86 @@
+{
+    "title": "Zarządzanie zasobami",
+    "subtitle": "Rejestracja i monitorowanie zasobów DER",
+    "list": {
+        "title": "Lista zasobów",
+        "empty": "Brak zarejestrowanych zasobów",
+        "search": "Szukaj zasobów...",
+        "filter": {
+            "all": "Wszystkie",
+            "byType": "Typ zasobu",
+            "byStatus": "Status",
+            "byRegion": "Region"
+        }
+    },
+    "types": {
+        "solar": "Fotowoltaika",
+        "wind": "Elektrownia wiatrowa",
+        "battery": "Magazyn energii (BESS)",
+        "ev_charger": "Stacja ładowania EV",
+        "industrial_load": "Obciążenie przemysłowe",
+        "chp": "Kogeneracja (CHP)",
+        "hydro": "Elektrownia wodna"
+    },
+    "details": {
+        "title": "Szczegóły zasobu",
+        "basicInfo": "Informacje podstawowe",
+        "technicalParams": "Parametry techniczne",
+        "location": "Lokalizacja",
+        "owner": "Właściciel",
+        "aggregator": "Agregator",
+        "registrationDate": "Data rejestracji",
+        "lastMaintenance": "Ostatni przegląd",
+        "totalAssets": "Łączna liczba zasobów"
+    },
+    "capacity": {
+        "nominal": "Moc nominalna",
+        "available": "Moc dostępna",
+        "current": "Moc aktualna",
+        "rampUp": "Zdolność najazdowa",
+        "rampDown": "Zdolność zejściowa"
+    },
+    "prequalification": {
+        "title": "Kwalifikacja wstępna",
+        "status": "Status kwalifikacji",
+        "pending": "Oczekuje na weryfikację",
+        "inProgress": "W trakcie testów",
+        "passed": "Zakwalifikowany",
+        "failed": "Niezakwalifikowany",
+        "startTest": "Rozpocznij test",
+        "viewReport": "Zobacz raport",
+        "fcr": "Test FCR",
+        "afrr": "Test aFRR",
+        "mfrr": "Test mFRR",
+        "rampTest": "Test rampy 15-minutowej"
+    },
+    "communication": {
+        "title": "Komunikacja",
+        "protocol": "Protokół",
+        "iec104": "IEC 60870-5-104",
+        "iec61850": "IEC 61850",
+        "modbus": "Modbus TCP/IP",
+        "openAdr": "OpenADR 2.0b",
+        "connectionStatus": "Status połączenia",
+        "lastSync": "Ostatnia synchronizacja",
+        "dataQuality": "Jakość danych"
+    },
+    "actions": {
+        "register": "Zarejestruj zasób",
+        "edit": "Edytuj zasób",
+        "remove": "Usuń zasób",
+        "startPrequalification": "Rozpocznij kwalifikację",
+        "viewHistory": "Historia zmian",
+        "exportData": "Eksportuj dane"
+    },
+    "form": {
+        "name": "Nazwa zasobu",
+        "type": "Typ zasobu",
+        "capacity": "Moc nominalna (kW)",
+        "location": "Lokalizacja",
+        "address": "Adres",
+        "coordinates": "Współrzędne GPS",
+        "owner": "Właściciel",
+        "contact": "Dane kontaktowe",
+        "submit": "Zapisz zasób"
+    }
+}

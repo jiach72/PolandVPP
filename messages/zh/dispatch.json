@@ -1,0 +1,78 @@
+{
+    "title": "调度中心",
+    "subtitle": "VPP 资源控制与管理",
+    "control": {
+        "title": "控制",
+        "mode": {
+            "title": "控制模式",
+            "auto": "自动 (AGC)",
+            "manual": "手动",
+            "priceSignal": "价格信号"
+        },
+        "setpoint": "设定点",
+        "currentOutput": "当前出力",
+        "targetOutput": "目标出力",
+        "rampRate": "爬坡速率"
+    },
+    "agc": {
+        "title": "自动发电控制 (AGC)",
+        "status": "AGC 状态",
+        "enabled": "已启用",
+        "disabled": "已禁用",
+        "regulationSignal": "调节信号",
+        "basepoint": "基准点",
+        "deviation": "偏差",
+        "responseTime": "响应时间"
+    },
+    "dispatch": {
+        "title": "调度指令",
+        "incoming": "接收",
+        "outgoing": "发出",
+        "history": "历史",
+        "source": "来源",
+        "target": "目标",
+        "command": "指令",
+        "timestamp": "时间戳",
+        "status": {
+            "received": "已接收",
+            "acknowledged": "已确认",
+            "executing": "执行中",
+            "completed": "已完成",
+            "failed": "失败"
+        }
+    },
+    "constraints": {
+        "title": "约束条件",
+        "dso": "DSO 约束",
+        "voltage": "电压限制",
+        "thermal": "热稳定限制",
+        "trafficLight": {
+            "title": "交通灯系统",
+            "green": "绿灯 - 无限制",
+            "yellow": "黄灯 - 可能受限",
+            "red": "红灯 - 需要干预"
+        }
+    },
+    "assets": {
+        "title": "受控资产",
+        "select": "选择资产",
+        "selectAll": "全选",
+        "deselectAll": "取消全选",
+        "groupControl": "群控"
+    },
+    "emergency": {
+        "title": "紧急模式",
+        "activate": "激活紧急模式",
+        "deactivate": "取消紧急模式",
+        "warning": "警告：激活紧急模式将关闭所有资产",
+        "confirm": "确定要激活紧急模式吗？"
+    },
+    "schedule": {
+        "title": "调度计划",
+        "today": "今天",
+        "tomorrow": "明天",
+        "week": "本周",
+        "planned": "计划中",
+        "executed": "已执行"
+    }
+}

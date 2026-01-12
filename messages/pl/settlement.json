@@ -1,0 +1,81 @@
+{
+    "title": "Rozliczenia",
+    "subtitle": "Rozliczenia i płatności",
+    "overview": {
+        "title": "Przegląd rozliczeń",
+        "period": "Okres rozliczeniowy",
+        "totalRevenue": "Całkowity przychód",
+        "totalCost": "Całkowity koszt",
+        "netBalance": "Bilans netto",
+        "pendingPayments": "Oczekujące płatności"
+    },
+    "invoices": {
+        "title": "Faktury",
+        "new": "Nowa faktura",
+        "list": "Lista faktur",
+        "number": "Numer faktury",
+        "date": "Data wystawienia",
+        "dueDate": "Termin płatności",
+        "amount": "Kwota",
+        "status": {
+            "draft": "Wersja robocza",
+            "issued": "Wystawiona",
+            "paid": "Opłacona",
+            "overdue": "Przeterminowana",
+            "cancelled": "Anulowana"
+        }
+    },
+    "transactions": {
+        "title": "Transakcje",
+        "type": "Typ transakcji",
+        "energy": "Energia",
+        "capacity": "Moc",
+        "penalty": "Kara",
+        "bonus": "Premia",
+        "adjustment": "Korekta"
+    },
+    "pricing": {
+        "title": "Ceny rozliczeniowe",
+        "payAsBid": "Pay-as-Bid",
+        "marginal": "Cena krańcowa",
+        "settlementPrice": "Cena rozliczeniowa"
+    },
+    "penalties": {
+        "title": "Kary umowne",
+        "reason": "Przyczyna",
+        "amount": "Kwota kary",
+        "nonDelivery": "Niedostarczenie energii",
+        "underPerformance": "Niewystarczająca wydajność",
+        "capacityShortfall": "Brak mocy"
+    },
+    "reports": {
+        "title": "Raporty rozliczeniowe",
+        "daily": "Raport dzienny",
+        "weekly": "Raport tygodniowy",
+        "monthly": "Raport miesięczny",
+        "annual": "Raport roczny",
+        "custom": "Raport niestandardowy",
+        "generate": "Generuj raport",
+        "download": "Pobierz PDF"
+    },
+    "blockchain": {
+        "title": "Weryfikacja blockchain",
+        "hash": "Hash transakcji",
+        "verified": "Zweryfikowano",
+        "timestamp": "Znacznik czasu",
+        "viewOnChain": "Zobacz w blockchain"
+    },
+    "aggregator": {
+        "title": "Rozliczenia z agregatorem",
+        "share": "Udział agregatora",
+        "commission": "Prowizja",
+        "payout": "Wypłata"
+    },
+    "prosumer": {
+        "title": "Rozliczenia prosumenta",
+        "earnings": "Zarobki",
+        "consumed": "Zużycie własne",
+        "exported": "Energia wyeksportowana",
+        "imported": "Energia zaimportowana"
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "title": "Balancing Market",
+    "subtitle": "Bidding Strategies and Energy Trading",
+    "overview": {
+        "title": "Market Overview",
+        "currentSession": "Current Session",
+        "nextSession": "Next Session",
+        "closingTime": "Closing Time"
+    },
+    "bidding": {
+        "title": "Bid Submission",
+        "newBid": "New Bid",
+        "myBids": "My Bids",
+        "bidHistory": "Bid History",
+        "quantity": "Quantity (MW)",
+        "price": "Price (PLN/MWh)",
+        "direction": "Direction",
+        "upward": "Upward",
+        "downward": "Downward",
+        "submittedAt": "Submitted At",
+        "validUntil": "Valid Until",
+        "status": {
+            "pending": "Pending",
+            "accepted": "Accepted",
+            "rejected": "Rejected",
+            "partial": "Partially Accepted",
+            "expired": "Expired"
+        }
+    },
+    "prices": {
+        "title": "Market Prices",
+        "current": "Current Price",
+        "forecast": "Price Forecast",
+        "history": "Price History",
+        "upRegulation": "Up Regulation",
+        "downRegulation": "Down Regulation",
+        "dayAhead": "Day-Ahead",
+        "intraday": "Intraday",
+        "balancing": "Balancing",
+        "maxPrice": "Maximum Price",
+        "minPrice": "Minimum Price"
+    },
+    "dam": {
+        "title": "Day-Ahead Market (DAM)",
+        "description": "Trading on TGE - Polish Power Exchange",
+        "clearingPrice": "Clearing Price",
+        "volume": "Trading Volume",
+        "schedule": "Delivery Schedule"
+    },
+    "balancing": {
+        "title": "Balancing Market (BM)",
+        "description": "Balancing services for PSE",
+        "activeBids": "Active Bids",
+        "callOrder": "Call Order",
+        "energyDelivered": "Energy Delivered"
+    },
+    "capacity": {
+        "title": "Capacity Market",
+        "obligation": "Capacity Obligation",
+        "certified": "Certified Capacity",
+        "delivered": "Delivered Capacity",
+        "penalty": "Potential Penalty"
+    },
+    "optimization": {
+        "title": "Strategy Optimization",
+        "autoOptimize": "Auto-Optimize",
+        "manualMode": "Manual Mode",
+        "marginalCost": "Marginal Cost",
+        "expectedRevenue": "Expected Revenue",
+        "riskLevel": "Risk Level"
+    },
+    "services": {
+        "fcr": "Frequency Containment Reserve (FCR)",
+        "afrr": "Automatic Frequency Restoration Reserve (aFRR)",
+        "mfrr": "Manual Frequency Restoration Reserve (mFRR)",
+        "rr": "Replacement Reserve (RR)"
+    }
+}

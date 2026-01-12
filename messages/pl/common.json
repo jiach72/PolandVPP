@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "title": "Panel VPP | PSE NextGen",
+    "description": "Platforma zarządzania wirtualnymi elektrowniami"
+  },
+  "nav": {
+    "dashboard": "Panel sterowania",
+    "assets": "Zarządzanie zasobami",
+    "market": "Rynek bilansujący",
+    "dispatch": "Dyspozytornia",
+    "dispatch_description": "Kontrola i sterowanie zasobami",
+    "settlement": "Rozliczenia",
+    "settings": "Ustawienia",
+    "profile": "Profil użytkownika",
+    "logout": "Wyloguj się",
+    "login": "Zaloguj się"
+  },
+  "actions": {
+    "save": "Zapisz",
+    "cancel": "Anuluj",
+    "edit": "Edytuj",
+    "delete": "Usuń",
+    "confirm": "Potwierdź",
+    "search": "Szukaj",
+    "filter": "Filtruj",
+    "export": "Eksportuj",
+    "import": "Importuj",
+    "refresh": "Odśwież",
+    "submit": "Wyślij",
+    "back": "Wróć",
+    "next": "Dalej",
+    "previous": "Wstecz",
+    "close": "Zamknij",
+    "add": "Dodaj",
+    "remove": "Usuń",
+    "view": "Zobacz",
+    "download": "Pobierz"
+  },
+  "status": {
+    "online": "Online",
+    "offline": "Offline",
+    "active": "Aktywny",
+    "inactive": "Nieaktywny",
+    "pending": "Oczekujący",
+    "approved": "Zatwierdzony",
+    "rejected": "Odrzucony",
+    "connected": "Połączony",
+    "disconnected": "Rozłączony",
+    "syncing": "Synchronizacja",
+    "error": "Błąd"
+  },
+  "time": {
+    "now": "Teraz",
+    "today": "Dzisiaj",
+    "yesterday": "Wczoraj",
+    "tomorrow": "Jutro",
+    "thisWeek": "Ten tydzień",
+    "thisMonth": "Ten miesiąc",
+    "lastUpdate": "Ostatnia aktualizacja"
+  },
+  "units": {
+    "mw": "MW",
+    "mwh": "MWh",
+    "kw": "kW",
+    "kwh": "kWh",
+    "hz": "Hz",
+    "pln": "PLN",
+    "percent": "%"
+  },
+  "roles": {
+    "tso_operator": "Operator TSO",
+    "aggregator": "Agregator",
+    "prosumer": "Prosument",
+    "auditor": "Audytor URE",
+    "admin": "Administrator"
+  },
+  "validation": {
+    "required": "To pole jest wymagane",
+    "email": "Nieprawidłowy adres email",
+    "minLength": "Minimalna długość to {count} znaków",
+    "maxLength": "Maksymalna długość to {count} znaków",
+    "invalidFormat": "Nieprawidłowy format"
+  },
+  "errors": {
+    "generic": "Wystąpił błąd. Spróbuj ponownie.",
+    "network": "Błąd połączenia z serwerem",
+    "unauthorized": "Brak uprawnień do wykonania tej akcji",
+    "notFound": "Nie znaleziono zasobu",
+    "serverError": "Błąd serwera"
+  },
+  "language": {
+    "select": "Wybierz język",
+    "polish": "Polski",
+    "english": "English",
+    "chinese": "简体中文"
+  }
+}

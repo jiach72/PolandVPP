@@ -1,0 +1,81 @@
+{
+    "title": "结算中心",
+    "subtitle": "计费与支付",
+    "overview": {
+        "title": "结算概览",
+        "period": "结算周期",
+        "totalRevenue": "总收入",
+        "totalCost": "总成本",
+        "netBalance": "净余额",
+        "pendingPayments": "待支付"
+    },
+    "invoices": {
+        "title": "发票",
+        "new": "新建发票",
+        "list": "发票列表",
+        "number": "发票号",
+        "date": "开票日期",
+        "dueDate": "到期日",
+        "amount": "金额",
+        "status": {
+            "draft": "草稿",
+            "issued": "已开具",
+            "paid": "已支付",
+            "overdue": "逾期",
+            "cancelled": "已取消"
+        }
+    },
+    "transactions": {
+        "title": "交易记录",
+        "type": "交易类型",
+        "energy": "电量",
+        "capacity": "容量",
+        "penalty": "罚款",
+        "bonus": "奖金",
+        "adjustment": "调整"
+    },
+    "pricing": {
+        "title": "结算价格",
+        "payAsBid": "按报价支付",
+        "marginal": "边际价格",
+        "settlementPrice": "结算价格"
+    },
+    "penalties": {
+        "title": "违约金",
+        "reason": "原因",
+        "amount": "罚款金额",
+        "nonDelivery": "未能交付电量",
+        "underPerformance": "出力不足",
+        "capacityShortfall": "容量不足"
+    },
+    "reports": {
+        "title": "结算报表",
+        "daily": "日报",
+        "weekly": "周报",
+        "monthly": "月报",
+        "annual": "年报",
+        "custom": "自定义报表",
+        "generate": "生成报表",
+        "download": "下载PDF"
+    },
+    "blockchain": {
+        "title": "区块链验证",
+        "hash": "交易哈希",
+        "verified": "已验证",
+        "timestamp": "时间戳",
+        "viewOnChain": "区块链查看"
+    },
+    "aggregator": {
+        "title": "聚合商结算",
+        "share": "聚合商分成",
+        "commission": "佣金",
+        "payout": "支付"
+    },
+    "prosumer": {
+        "title": "产消者结算",
+        "earnings": "收益",
+        "consumed": "自用电量",
+        "exported": "上网电量",
+        "imported": "购入电量"
+    }
+}

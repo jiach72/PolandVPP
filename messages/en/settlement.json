@@ -1,0 +1,81 @@
+{
+    "title": "Settlement",
+    "subtitle": "Billing and Payments",
+    "overview": {
+        "title": "Settlement Overview",
+        "period": "Settlement Period",
+        "totalRevenue": "Total Revenue",
+        "totalCost": "Total Cost",
+        "netBalance": "Net Balance",
+        "pendingPayments": "Pending Payments"
+    },
+    "invoices": {
+        "title": "Invoices",
+        "new": "New Invoice",
+        "list": "Invoice List",
+        "number": "Invoice Number",
+        "date": "Issue Date",
+        "dueDate": "Due Date",
+        "amount": "Amount",
+        "status": {
+            "draft": "Draft",
+            "issued": "Issued",
+            "paid": "Paid",
+            "overdue": "Overdue",
+            "cancelled": "Cancelled"
+        }
+    },
+    "transactions": {
+        "title": "Transactions",
+        "type": "Transaction Type",
+        "energy": "Energy",
+        "capacity": "Capacity",
+        "penalty": "Penalty",
+        "bonus": "Bonus",
+        "adjustment": "Adjustment"
+    },
+    "pricing": {
+        "title": "Settlement Pricing",
+        "payAsBid": "Pay-as-Bid",
+        "marginal": "Marginal Price",
+        "settlementPrice": "Settlement Price"
+    },
+    "penalties": {
+        "title": "Penalties",
+        "reason": "Reason",
+        "amount": "Penalty Amount",
+        "nonDelivery": "Non-delivery of energy",
+        "underPerformance": "Underperformance",
+        "capacityShortfall": "Capacity shortfall"
+    },
+    "reports": {
+        "title": "Settlement Reports",
+        "daily": "Daily Report",
+        "weekly": "Weekly Report",
+        "monthly": "Monthly Report",
+        "annual": "Annual Report",
+        "custom": "Custom Report",
+        "generate": "Generate Report",
+        "download": "Download PDF"
+    },
+    "blockchain": {
+        "title": "Blockchain Verification",
+        "hash": "Transaction Hash",
+        "verified": "Verified",
+        "timestamp": "Timestamp",
+        "viewOnChain": "View on Blockchain"
+    },
+    "aggregator": {
+        "title": "Aggregator Settlement",
+        "share": "Aggregator Share",
+        "commission": "Commission",
+        "payout": "Payout"
+    },
+    "prosumer": {
+        "title": "Prosumer Settlement",
+        "earnings": "Earnings",
+        "consumed": "Self-consumption",
+        "exported": "Energy Exported",
+        "imported": "Energy Imported"
+    }
+}

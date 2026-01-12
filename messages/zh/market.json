@@ -1,0 +1,78 @@
+{
+    "title": "平衡市场",
+    "subtitle": "竞价策略与能源交易",
+    "overview": {
+        "title": "市场概览",
+        "currentSession": "当前交易时段",
+        "nextSession": "下一交易时段",
+        "closingTime": "截止时间"
+    },
+    "bidding": {
+        "title": "报价提交",
+        "newBid": "新报价",
+        "myBids": "我的报价",
+        "bidHistory": "报价历史",
+        "quantity": "数量 (MW)",
+        "price": "价格 (PLN/MWh)",
+        "direction": "方向",
+        "upward": "上调",
+        "downward": "下调",
+        "submittedAt": "提交时间",
+        "validUntil": "有效期至",
+        "status": {
+            "pending": "待处理",
+            "accepted": "已接受",
+            "rejected": "已拒绝",
+            "partial": "部分接受",
+            "expired": "已过期"
+        }
+    },
+    "prices": {
+        "title": "市场价格",
+        "current": "当前价格",
+        "forecast": "价格预测",
+        "history": "价格历史",
+        "upRegulation": "上调价格",
+        "downRegulation": "下调价格",
+        "dayAhead": "日前市场",
+        "intraday": "日内市场",
+        "balancing": "平衡市场",
+        "maxPrice": "最高价格",
+        "minPrice": "最低价格"
+    },
+    "dam": {
+        "title": "日前市场 (DAM)",
+        "description": "TGE 波兰电力交易所交易",
+        "clearingPrice": "出清价格",
+        "volume": "交易量",
+        "schedule": "交割计划"
+    },
+    "balancing": {
+        "title": "平衡市场 (BM)",
+        "description": "PSE 平衡服务",
+        "activeBids": "活跃报价",
+        "callOrder": "调用顺序",
+        "energyDelivered": "已交付电量"
+    },
+    "capacity": {
+        "title": "容量市场",
+        "obligation": "容量义务",
+        "certified": "认证容量",
+        "delivered": "交付容量",
+        "penalty": "潜在罚款"
+    },
+    "optimization": {
+        "title": "策略优化",
+        "autoOptimize": "自动优化",
+        "manualMode": "手动模式",
+        "marginalCost": "边际成本",
+        "expectedRevenue": "预期收益",
+        "riskLevel": "风险等级"
+    },
+    "services": {
+        "fcr": "频率控制储备 (FCR)",
+        "afrr": "自动频率恢复储备 (aFRR)",
+        "mfrr": "手动频率恢复储备 (mFRR)",
+        "rr": "替代储备 (RR)"
+    }
+}

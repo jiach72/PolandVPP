@@ -1,0 +1,78 @@
+{
+    "title": "Rynek bilansujący",
+    "subtitle": "Strategie ofertowe i handel energią",
+    "overview": {
+        "title": "Przegląd rynku",
+        "currentSession": "Aktualna sesja",
+        "nextSession": "Następna sesja",
+        "closingTime": "Czas zamknięcia"
+    },
+    "bidding": {
+        "title": "Składanie ofert",
+        "newBid": "Nowa oferta",
+        "myBids": "Moje oferty",
+        "bidHistory": "Historia ofert",
+        "quantity": "Ilość (MW)",
+        "price": "Cena (PLN/MWh)",
+        "direction": "Kierunek",
+        "upward": "W górę",
+        "downward": "W dół",
+        "submittedAt": "Data złożenia",
+        "validUntil": "Ważna do",
+        "status": {
+            "pending": "Oczekująca",
+            "accepted": "Zaakceptowana",
+            "rejected": "Odrzucona",
+            "partial": "Częściowo zaakceptowana",
+            "expired": "Wygasła"
+        }
+    },
+    "prices": {
+        "title": "Ceny rynkowe",
+        "current": "Aktualna cena",
+        "forecast": "Prognoza cen",
+        "history": "Historia cen",
+        "upRegulation": "Regulacja w górę",
+        "downRegulation": "Regulacja w dół",
+        "dayAhead": "Day-Ahead",
+        "intraday": "Intraday",
+        "balancing": "Bilansujący",
+        "maxPrice": "Cena maksymalna",
+        "minPrice": "Cena minimalna"
+    },
+    "dam": {
+        "title": "Rynek dnia następnego (DAM)",
+        "description": "Handel na TGE - Towarowa Giełda Energii",
+        "clearingPrice": "Cena rozliczeniowa",
+        "volume": "Wolumen obrotu",
+        "schedule": "Harmonogram dostaw"
+    },
+    "balancing": {
+        "title": "Rynek bilansujący (BM)",
+        "description": "Usługi bilansowania dla PSE",
+        "activeBids": "Aktywne oferty",
+        "callOrder": "Kolejność wywołania",
+        "energyDelivered": "Energia dostarczona"
+    },
+    "capacity": {
+        "title": "Rynek mocy",
+        "obligation": "Zobowiązanie mocowe",
+        "certified": "Moc certyfikowana",
+        "delivered": "Moc dostarczona",
+        "penalty": "Potencjalna kara"
+    },
+    "optimization": {
+        "title": "Optymalizacja strategii",
+        "autoOptimize": "Auto-optymalizacja",
+        "manualMode": "Tryb ręczny",
+        "marginalCost": "Koszt krańcowy",
+        "expectedRevenue": "Oczekiwany przychód",
+        "riskLevel": "Poziom ryzyka"
+    },
+    "services": {
+        "fcr": "Rezerwa Regulacji Częstotliwości (FCR)",
+        "afrr": "Automatyczna Rezerwa Odbudowy Częstotliwości (aFRR)",
+        "mfrr": "Ręczna Rezerwa Odbudowy Częstotliwości (mFRR)",
+        "rr": "Rezerwa Zastępcza (RR)"
+    }
+}

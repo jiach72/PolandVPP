@@ -1,0 +1,83 @@
+{
+    "title": "VPP Operator Dashboard",
+    "subtitle": "Real-time System Overview",
+    "welcome": "Welcome, {name}",
+    "overview": {
+        "title": "System Overview",
+        "totalCapacity": "Total Capacity",
+        "availableCapacity": "Available Regulation",
+        "upRegulation": "Up Regulation",
+        "downRegulation": "Down Regulation",
+        "activeAssets": "Active Assets",
+        "totalAssets": "Total Assets",
+        "currentGeneration": "Current Generation",
+        "currentLoad": "Current Load"
+    },
+    "frequency": {
+        "title": "System Frequency",
+        "current": "Current Frequency",
+        "target": "Target Frequency",
+        "deviation": "Deviation",
+        "normal": "Normal",
+        "warning": "Warning",
+        "critical": "Critical"
+    },
+    "alerts": {
+        "title": "Active Alerts",
+        "noAlerts": "No active alerts",
+        "critical": "Critical",
+        "warning": "Warning",
+        "info": "Info",
+        "acknowledge": "Acknowledge",
+        "details": "Details",
+        "time": "Time"
+    },
+    "events": {
+        "title": "Recent Events",
+        "noEvents": "No events",
+        "viewAll": "View All",
+        "dispatchReceived": "Dispatch command received",
+        "assetConnected": "Asset connected",
+        "assetDisconnected": "Asset disconnected",
+        "bidAccepted": "Bid accepted",
+        "bidRejected": "Bid rejected"
+    },
+    "map": {
+        "title": "Distributed Energy Resources Map",
+        "legend": "Legend",
+        "wojewodztwo": "Voivodeship",
+        "zoom": "Zoom",
+        "assets": {
+            "solar": "Solar PV",
+            "wind": "Wind Farm",
+            "battery": "Battery Storage",
+            "ev": "EV Charging Stations",
+            "industrial": "Industrial Load"
+        }
+    },
+    "forecast": {
+        "title": "Energy Forecast",
+        "next24h": "Next 24 Hours",
+        "next48h": "Next 48 Hours",
+        "generation": "Generation",
+        "load": "Load",
+        "net": "Net Balance",
+        "confidence": "Confidence Level"
+    },
+    "market": {
+        "title": "Market Summary",
+        "currentPrice": "Current Price",
+        "avgPrice": "Average Price",
+        "maxPrice": "Maximum Price",
+        "minPrice": "Minimum Price",
+        "volume": "Volume",
+        "trend": "Trend"
+    },
+    "kpi": {
+        "title": "KPI Indicators",
+        "availability": "Availability",
+        "responseTime": "Response Time",
+        "accuracy": "Forecast Accuracy",
+        "compliance": "Regulatory Compliance"
+    }
+}

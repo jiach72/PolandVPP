@@ -1,0 +1,78 @@
+{
+    "title": "Dispatch Center",
+    "subtitle": "VPP Resource Control and Management",
+    "control": {
+        "title": "Control",
+        "mode": {
+            "title": "Control Mode",
+            "auto": "Automatic (AGC)",
+            "manual": "Manual",
+            "priceSignal": "Price Signal"
+        },
+        "setpoint": "Setpoint",
+        "currentOutput": "Current Output",
+        "targetOutput": "Target Output",
+        "rampRate": "Ramp Rate"
+    },
+    "agc": {
+        "title": "Automatic Generation Control (AGC)",
+        "status": "AGC Status",
+        "enabled": "Enabled",
+        "disabled": "Disabled",
+        "regulationSignal": "Regulation Signal",
+        "basepoint": "Basepoint",
+        "deviation": "Deviation",
+        "responseTime": "Response Time"
+    },
+    "dispatch": {
+        "title": "Dispatch Commands",
+        "incoming": "Incoming",
+        "outgoing": "Outgoing",
+        "history": "History",
+        "source": "Source",
+        "target": "Target",
+        "command": "Command",
+        "timestamp": "Timestamp",
+        "status": {
+            "received": "Received",
+            "acknowledged": "Acknowledged",
+            "executing": "Executing",
+            "completed": "Completed",
+            "failed": "Failed"
+        }
+    },
+    "constraints": {
+        "title": "Constraints",
+        "dso": "DSO Constraints",
+        "voltage": "Voltage Limits",
+        "thermal": "Thermal Limits",
+        "trafficLight": {
+            "title": "Traffic Light System",
+            "green": "Green - No restrictions",
+            "yellow": "Yellow - Possible restrictions",
+            "red": "Red - Intervention required"
+        }
+    },
+    "assets": {
+        "title": "Assets Under Control",
+        "select": "Select Asset",
+        "selectAll": "Select All",
+        "deselectAll": "Deselect All",
+        "groupControl": "Group Control"
+    },
+    "emergency": {
+        "title": "Emergency Mode",
+        "activate": "Activate Emergency Mode",
+        "deactivate": "Deactivate Emergency Mode",
+        "warning": "Warning: Activating emergency mode will shut down all assets",
+        "confirm": "Are you sure you want to activate emergency mode?"
+    },
+    "schedule": {
+        "title": "Schedule",
+        "today": "Today",
+        "tomorrow": "Tomorrow",
+        "week": "This Week",
+        "planned": "Planned",
+        "executed": "Executed"
+    }
+}

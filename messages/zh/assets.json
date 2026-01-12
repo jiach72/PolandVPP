@@ -1,0 +1,86 @@
+{
+    "title": "资产管理",
+    "subtitle": "分布式能源资源注册与监控",
+    "list": {
+        "title": "资产列表",
+        "empty": "暂无注册资产",
+        "search": "搜索资产...",
+        "filter": {
+            "all": "全部",
+            "byType": "资产类型",
+            "byStatus": "状态",
+            "byRegion": "区域"
+        }
+    },
+    "types": {
+        "solar": "光伏电站",
+        "wind": "风力发电",
+        "battery": "储能系统 (BESS)",
+        "ev_charger": "充电站",
+        "industrial_load": "工业负荷",
+        "chp": "热电联产 (CHP)",
+        "hydro": "水力发电"
+    },
+    "details": {
+        "title": "资产详情",
+        "basicInfo": "基本信息",
+        "technicalParams": "技术参数",
+        "location": "位置",
+        "owner": "所有者",
+        "aggregator": "聚合商",
+        "registrationDate": "注册日期",
+        "lastMaintenance": "上次维护",
+        "totalAssets": "资产总数"
+    },
+    "capacity": {
+        "nominal": "额定容量",
+        "available": "可用容量",
+        "current": "当前出力",
+        "rampUp": "爬坡速率",
+        "rampDown": "降坡速率"
+    },
+    "prequalification": {
+        "title": "资格预审",
+        "status": "资格状态",
+        "pending": "待审核",
+        "inProgress": "测试中",
+        "passed": "已通过",
+        "failed": "未通过",
+        "startTest": "开始测试",
+        "viewReport": "查看报告",
+        "fcr": "FCR测试",
+        "afrr": "aFRR测试",
+        "mfrr": "mFRR测试",
+        "rampTest": "15分钟爬坡测试"
+    },
+    "communication": {
+        "title": "通信配置",
+        "protocol": "通信协议",
+        "iec104": "IEC 60870-5-104",
+        "iec61850": "IEC 61850",
+        "modbus": "Modbus TCP/IP",
+        "openAdr": "OpenADR 2.0b",
+        "connectionStatus": "连接状态",
+        "lastSync": "最后同步",
+        "dataQuality": "数据质量"
+    },
+    "actions": {
+        "register": "注册资产",
+        "edit": "编辑资产",
+        "remove": "移除资产",
+        "startPrequalification": "开始资格预审",
+        "viewHistory": "查看历史",
+        "exportData": "导出数据"
+    },
+    "form": {
+        "name": "资产名称",
+        "type": "资产类型",
+        "capacity": "额定容量 (kW)",
+        "location": "位置",
+        "address": "地址",
+        "coordinates": "GPS坐标",
+        "owner": "所有者",
+        "contact": "联系方式",
+        "submit": "保存资产"
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "title": "Asset Management",
+    "subtitle": "DER Registration and Monitoring",
+    "list": {
+        "title": "Asset List",
+        "empty": "No registered assets",
+        "search": "Search assets...",
+        "filter": {
+            "all": "All",
+            "byType": "Asset Type",
+            "byStatus": "Status",
+            "byRegion": "Region"
+        }
+    },
+    "types": {
+        "solar": "Solar PV",
+        "wind": "Wind Farm",
+        "battery": "Battery Storage (BESS)",
+        "ev_charger": "EV Charging Station",
+        "industrial_load": "Industrial Load",
+        "chp": "Combined Heat & Power (CHP)",
+        "hydro": "Hydropower"
+    },
+    "details": {
+        "title": "Asset Details",
+        "basicInfo": "Basic Information",
+        "technicalParams": "Technical Parameters",
+        "location": "Location",
+        "owner": "Owner",
+        "aggregator": "Aggregator",
+        "registrationDate": "Registration Date",
+        "lastMaintenance": "Last Maintenance",
+        "totalAssets": "Total Assets"
+    },
+    "capacity": {
+        "nominal": "Nominal Capacity",
+        "available": "Available Capacity",
+        "current": "Current Output",
+        "rampUp": "Ramp Up Rate",
+        "rampDown": "Ramp Down Rate"
+    },
+    "prequalification": {
+        "title": "Prequalification",
+        "status": "Qualification Status",
+        "pending": "Pending Verification",
+        "inProgress": "Testing in Progress",
+        "passed": "Qualified",
+        "failed": "Not Qualified",
+        "startTest": "Start Test",
+        "viewReport": "View Report",
+        "fcr": "FCR Test",
+        "afrr": "aFRR Test",
+        "mfrr": "mFRR Test",
+        "rampTest": "15-minute Ramp Test"
+    },
+    "communication": {
+        "title": "Communication",
+        "protocol": "Protocol",
+        "iec104": "IEC 60870-5-104",
+        "iec61850": "IEC 61850",
+        "modbus": "Modbus TCP/IP",
+        "openAdr": "OpenADR 2.0b",
+        "connectionStatus": "Connection Status",
+        "lastSync": "Last Sync",
+        "dataQuality": "Data Quality"
+    },
+    "actions": {
+        "register": "Register Asset",
+        "edit": "Edit Asset",
+        "remove": "Remove Asset",
+        "startPrequalification": "Start Prequalification",
+        "viewHistory": "View History",
+        "exportData": "Export Data"
+    },
+    "form": {
+        "name": "Asset Name",
+        "type": "Asset Type",
+        "capacity": "Nominal Capacity (kW)",
+        "location": "Location",
+        "address": "Address",
+        "coordinates": "GPS Coordinates",
+        "owner": "Owner",
+        "contact": "Contact Details",
+        "submit": "Save Asset"
+    }
+}

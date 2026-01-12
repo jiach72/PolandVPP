@@ -1,0 +1,83 @@
+{
+    "title": "VPP 运营控制台",
+    "subtitle": "实时系统概览",
+    "welcome": "欢迎，{name}",
+    "overview": {
+        "title": "系统概览",
+        "totalCapacity": "总容量",
+        "availableCapacity": "可调度容量",
+        "upRegulation": "上调容量",
+        "downRegulation": "下调容量",
+        "activeAssets": "在线资产",
+        "totalAssets": "总资产数",
+        "currentGeneration": "当前发电量",
+        "currentLoad": "当前负荷"
+    },
+    "frequency": {
+        "title": "系统频率",
+        "current": "当前频率",
+        "target": "目标频率",
+        "deviation": "偏差",
+        "normal": "正常",
+        "warning": "警告",
+        "critical": "严重"
+    },
+    "alerts": {
+        "title": "活动告警",
+        "noAlerts": "暂无告警",
+        "critical": "严重",
+        "warning": "警告",
+        "info": "信息",
+        "acknowledge": "确认",
+        "details": "详情",
+        "time": "时间"
+    },
+    "events": {
+        "title": "最近事件",
+        "noEvents": "暂无事件",
+        "viewAll": "查看全部",
+        "dispatchReceived": "收到调度指令",
+        "assetConnected": "资产已连接",
+        "assetDisconnected": "资产已断开",
+        "bidAccepted": "报价已接受",
+        "bidRejected": "报价已拒绝"
+    },
+    "map": {
+        "title": "分布式能源资源地图",
+        "legend": "图例",
+        "wojewodztwo": "省份",
+        "zoom": "缩放",
+        "assets": {
+            "solar": "光伏电站",
+            "wind": "风力发电",
+            "battery": "储能系统",
+            "ev": "充电站群",
+            "industrial": "工业负荷"
+        }
+    },
+    "forecast": {
+        "title": "能源预测",
+        "next24h": "未来24小时",
+        "next48h": "未来48小时",
+        "generation": "发电量",
+        "load": "负荷",
+        "net": "净平衡",
+        "confidence": "置信度"
+    },
+    "market": {
+        "title": "市场概要",
+        "currentPrice": "当前价格",
+        "avgPrice": "平均价格",
+        "maxPrice": "最高价格",
+        "minPrice": "最低价格",
+        "volume": "交易量",
+        "trend": "趋势"
+    },
+    "kpi": {
+        "title": "关键绩效指标",
+        "availability": "可用率",
+        "responseTime": "响应时间",
+        "accuracy": "预测准确率",
+        "compliance": "合规性"
+    }
+}
