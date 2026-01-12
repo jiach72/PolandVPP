@@ -5,46 +5,62 @@ import type { Metadata } from "next";
 import "../globals.css";
 import { Toaster } from 'sonner';
 
+// Static imports for all message files
+import enCommon from '../../../messages/en/common.json';
+import enDashboard from '../../../messages/en/dashboard.json';
+import enAssets from '../../../messages/en/assets.json';
+import enMarket from '../../../messages/en/market.json';
+import enDispatch from '../../../messages/en/dispatch.json';
+import enSettlement from '../../../messages/en/settlement.json';
+
+import plCommon from '../../../messages/pl/common.json';
+import plDashboard from '../../../messages/pl/dashboard.json';
+import plAssets from '../../../messages/pl/assets.json';
+import plMarket from '../../../messages/pl/market.json';
+import plDispatch from '../../../messages/pl/dispatch.json';
+import plSettlement from '../../../messages/pl/settlement.json';
+
+import zhCommon from '../../../messages/zh/common.json';
+import zhDashboard from '../../../messages/zh/dashboard.json';
+import zhAssets from '../../../messages/zh/assets.json';
+import zhMarket from '../../../messages/zh/market.json';
+import zhDispatch from '../../../messages/zh/dispatch.json';
+import zhSettlement from '../../../messages/zh/settlement.json';
+
+// Pre-bundled message objects
+const allMessages: Record<string, any> = {
+    en: {
+        common: enCommon,
+        dashboard: enDashboard,
+        assets: enAssets,
+        market: enMarket,
+        dispatch: enDispatch,
+        settlement: enSettlement,
+    },
+    pl: {
+        common: plCommon,
+        dashboard: plDashboard,
+        assets: plAssets,
+        market: plMarket,
+        dispatch: plDispatch,
+        settlement: plSettlement,
+    },
+    zh: {
+        common: zhCommon,
+        dashboard: zhDashboard,
+        assets: zhAssets,
+        market: zhMarket,
+        dispatch: zhDispatch,
+        settlement: zhSettlement,
+    },
+};
+
 export const metadata: Metadata = {
     title: "PSE NextGen VPP Platform",
     description: "Virtual Power Plant Platform for Polish Power Grid",
 };
 
 export const runtime = 'edge';
-
-// Static message loader for Edge Runtime compatibility
-async function loadMessages(locale: string) {
-    switch (locale) {
-        case 'zh':
-            return {
-                common: (await import('../../../messages/zh/common.json')).default,
-                dashboard: (await import('../../../messages/zh/dashboard.json')).default,
-                assets: (await import('../../../messages/zh/assets.json')).default,
-                market: (await import('../../../messages/zh/market.json')).default,
-                dispatch: (await import('../../../messages/zh/dispatch.json')).default,
-                settlement: (await import('../../../messages/zh/settlement.json')).default,
-            };
-        case 'pl':
-            return {
-                common: (await import('../../../messages/pl/common.json')).default,
-                dashboard: (await import('../../../messages/pl/dashboard.json')).default,
-                assets: (await import('../../../messages/pl/assets.json')).default,
-                market: (await import('../../../messages/pl/market.json')).default,
-                dispatch: (await import('../../../messages/pl/dispatch.json')).default,
-                settlement: (await import('../../../messages/pl/settlement.json')).default,
-            };
-        case 'en':
-        default:
-            return {
-                common: (await import('../../../messages/en/common.json')).default,
-                dashboard: (await import('../../../messages/en/dashboard.json')).default,
-                assets: (await import('../../../messages/en/assets.json')).default,
-                market: (await import('../../../messages/en/market.json')).default,
-                dispatch: (await import('../../../messages/en/dispatch.json')).default,
-                settlement: (await import('../../../messages/en/settlement.json')).default,
-            };
-    }
-}
 
 export default async function LocaleLayout({
     children,
@@ -60,8 +76,8 @@ export default async function LocaleLayout({
         notFound();
     }
 
-    // Load messages directly for Edge Runtime compatibility
-    const messages = await loadMessages(locale);
+    // Get pre-bundled messages for this locale
+    const messages = allMessages[locale] || allMessages['en'];
 
     return (
         <html lang={locale}>
@@ -78,4 +94,3 @@ export default async function LocaleLayout({
         </html>
     );
 }
-
