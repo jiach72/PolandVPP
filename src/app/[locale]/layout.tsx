@@ -1,9 +1,11 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
-import { routing } from '@/i18n/config';
 import type { Metadata } from "next";
 import "../globals.css";
 import { Toaster } from 'sonner';
+
+// Simple locales list - no external dependencies
+const validLocales = ['pl', 'en', 'zh'];
 
 // Static imports for all message files
 import enCommon from '../../../messages/en/common.json';
@@ -72,7 +74,7 @@ export default async function LocaleLayout({
     const { locale } = await params;
 
     // Ensure that the incoming `locale` is valid
-    if (!routing.locales.includes(locale as any)) {
+    if (!validLocales.includes(locale)) {
         notFound();
     }
 
