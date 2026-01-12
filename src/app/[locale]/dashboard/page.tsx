@@ -1,4 +1,3 @@
-import { setRequestLocale } from 'next-intl/server';
 import DashboardClientContent from '@/components/DashboardClientContent';
 
 type Props = {
@@ -6,8 +5,7 @@ type Props = {
 };
 
 export default async function DashboardPage({ params }: Props) {
-    const { locale } = await params;
-    setRequestLocale(locale);
+    await params; // Keep params resolution for Next.js
 
     return <DashboardClientContent />;
 }

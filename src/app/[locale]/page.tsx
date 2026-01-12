@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
 import LocaleSwitcher from '@/components/LocaleSwitcher';
 import { Link } from '@/i18n/navigation';
 
@@ -8,8 +7,7 @@ type Props = {
 };
 
 export default async function HomePage({ params }: Props) {
-    const { locale } = await params;
-    setRequestLocale(locale);
+    await params; // Keep params resolution for Next.js
 
     return <HomePageContent />;
 }

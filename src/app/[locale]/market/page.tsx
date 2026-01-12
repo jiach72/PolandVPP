@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
 import Navbar from '@/components/Navbar';
 import PriceHistoryWrapper from '@/components/PriceHistoryWrapper';
 import { BiddingWidget } from '@/components/BiddingWidget';
@@ -18,8 +17,7 @@ type Bid = {
 };
 
 export default async function MarketPage({ params }: Props) {
-    const { locale } = await params;
-    setRequestLocale(locale);
+    await params; // Keep params resolution for Next.js
 
     // 模拟初始报价数据
     const initialBids: Bid[] = [

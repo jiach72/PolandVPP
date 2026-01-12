@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
 import Navbar from '@/components/Navbar';
 
 type Props = {
@@ -7,8 +6,7 @@ type Props = {
 };
 
 export default async function SettlementPage({ params }: Props) {
-    const { locale } = await params;
-    setRequestLocale(locale);
+    await params; // Keep params resolution for Next.js
 
     return <SettlementContent />;
 }

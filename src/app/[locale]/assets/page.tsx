@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
 import AssetsPageClientContent from '@/components/AssetsPageClientContent';
 
 type Props = {
@@ -7,8 +6,7 @@ type Props = {
 };
 
 export default async function AssetsPage({ params }: Props) {
-    const { locale } = await params;
-    setRequestLocale(locale);
+    await params; // Keep params resolution for Next.js
 
     // 模拟资产数据 - 从 Server Component 传递给 Client Component
     const assets = [
