@@ -12,14 +12,40 @@ export default getRequestConfig(async ({ requestLocale }) => {
     console.log(`[RequestConfig] Loading messages for locale: ${locale}`);
 
     try {
-        const messages = {
-            common: (await import(`../../messages/${locale}/common.json`)).default,
-            dashboard: (await import(`../../messages/${locale}/dashboard.json`)).default,
-            assets: (await import(`../../messages/${locale}/assets.json`)).default,
-            market: (await import(`../../messages/${locale}/market.json`)).default,
-            dispatch: (await import(`../../messages/${locale}/dispatch.json`)).default,
-            settlement: (await import(`../../messages/${locale}/settlement.json`)).default,
-        };
+        let messages;
+        switch (locale) {
+            case 'zh':
+                messages = {
+                    common: (await import('../../messages/zh/common.json')).default,
+                    dashboard: (await import('../../messages/zh/dashboard.json')).default,
+                    assets: (await import('../../messages/zh/assets.json')).default,
+                    market: (await import('../../messages/zh/market.json')).default,
+                    dispatch: (await import('../../messages/zh/dispatch.json')).default,
+                    settlement: (await import('../../messages/zh/settlement.json')).default,
+                };
+                break;
+            case 'pl':
+                messages = {
+                    common: (await import('../../messages/pl/common.json')).default,
+                    dashboard: (await import('../../messages/pl/dashboard.json')).default,
+                    assets: (await import('../../messages/pl/assets.json')).default,
+                    market: (await import('../../messages/pl/market.json')).default,
+                    dispatch: (await import('../../messages/pl/dispatch.json')).default,
+                    settlement: (await import('../../messages/pl/settlement.json')).default,
+                };
+                break;
+            case 'en':
+            default:
+                messages = {
+                    common: (await import('../../messages/en/common.json')).default,
+                    dashboard: (await import('../../messages/en/dashboard.json')).default,
+                    assets: (await import('../../messages/en/assets.json')).default,
+                    market: (await import('../../messages/en/market.json')).default,
+                    dispatch: (await import('../../messages/en/dispatch.json')).default,
+                    settlement: (await import('../../messages/en/settlement.json')).default,
+                };
+                break;
+        }
 
         console.log(`[RequestConfig] Successfully loaded messages for locale: ${locale}`);
         return {
