@@ -29,8 +29,7 @@
         "owner": "Owner",
         "aggregator": "Aggregator",
         "registrationDate": "Registration Date",
-        "lastMaintenance": "Last Maintenance",
-        "totalAssets": "Total Assets"
+        "lastMaintenance": "Last Maintenance"
     },
     "capacity": {
         "nominal": "Nominal Capacity",

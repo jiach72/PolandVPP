@@ -1,40 +1,36 @@
-import { notFound } from 'next/navigation';
 import { getRequestConfig } from 'next-intl/server';
-import { locales, type Locale } from './config';
+import { routing } from './config';
 
-// 动态加载翻译文件
-async function loadMessages(locale: Locale) {
-    const messages: any = {};
+export default getRequestConfig(async ({ requestLocale }) => {
+    let locale = await requestLocale;
 
-    // 加载所有命名空间的翻译
-    const namespaces = ['common', 'dashboard', 'assets', 'market', 'dispatch', 'settlement'];
-
-    for (const namespace of namespaces) {
-        try {
-            const module = await import(`../../messages/${locale}/${namespace}.json`);
-            messages[namespace] = module.default;
-        } catch {
-            // 如果翻译文件不存在，使用空对象
-            console.warn(`Missing translation file: ${locale}/${namespace}.json`);
-            messages[namespace] = {};
-        }
+    // Validate that the incoming `locale` parameter is valid
+    if (!locale || !routing.locales.includes(locale as any)) {
+        locale = routing.defaultLocale;
     }
 
-    return messages;
-}
+    console.log(`[RequestConfig] Loading messages for locale: ${locale}`);
 
-export default getRequestConfig(async (params) => {
-    // 验证语言是否支持
-    const locale = params.locale as Locale;
+    try {
+        const messages = {
+            common: (await import(`../../messages/${locale}/common.json`)).default,
+            dashboard: (await import(`../../messages/${locale}/dashboard.json`)).default,
+            assets: (await import(`../../messages/${locale}/assets.json`)).default,
+            market: (await import(`../../messages/${locale}/market.json`)).default,
+            dispatch: (await import(`../../messages/${locale}/dispatch.json`)).default,
+            settlement: (await import(`../../messages/${locale}/settlement.json`)).default,
+        };
 
-    if (!locales.includes(locale)) {
-        notFound();
+        console.log(`[RequestConfig] Successfully loaded messages for locale: ${locale}`);
+        return {
+            locale,
+            messages
+        };
+    } catch (error) {
+        console.error(`[RequestConfig] Error loading messages for locale ${locale}:`, error);
+        return {
+            locale,
+            messages: {}
+        };
     }
-
-    const messages = await loadMessages(locale);
-
-    return {
-        messages,
-        timeZone: 'Europe/Warsaw',
-    };
 });

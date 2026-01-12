@@ -36,9 +36,7 @@
         "downRegulation": "Down Regulation",
         "dayAhead": "Day-Ahead",
         "intraday": "Intraday",
-        "balancing": "Balancing",
-        "maxPrice": "Maximum Price",
-        "minPrice": "Minimum Price"
+        "balancing": "Balancing"
     },
     "dam": {
         "title": "Day-Ahead Market (DAM)",

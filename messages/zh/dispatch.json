@@ -74,5 +74,8 @@
         "week": "本周",
         "planned": "计划中",
         "executed": "已执行"
+    },
+    "commands": {
+        "title": "指令模拟"
     }
 }

@@ -36,9 +36,7 @@
         "downRegulation": "下调价格",
         "dayAhead": "日前市场",
         "intraday": "日内市场",
-        "balancing": "平衡市场",
-        "maxPrice": "最高价格",
-        "minPrice": "最低价格"
+        "balancing": "平衡市场"
     },
     "dam": {
         "title": "日前市场 (DAM)",

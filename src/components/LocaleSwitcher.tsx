@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useRouter, usePathname } from '@/i18n/navigation';
 import { locales, localeConfig, type Locale } from '@/i18n/config';
 import { useState, useTransition, useRef, useEffect } from 'react';
+import { FlagPL, FlagGB, FlagCN } from './FlagIcons';
 
 export default function LocaleSwitcher() {
     const t = useTranslations('common');
@@ -13,6 +14,12 @@ export default function LocaleSwitcher() {
     const [isPending, startTransition] = useTransition();
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
+
+    const FlagComponents = {
+        pl: FlagPL,
+        en: FlagGB,
+        zh: FlagCN
+    };
 
     // 点击外部关闭下拉菜单
     useEffect(() => {
@@ -33,6 +40,7 @@ export default function LocaleSwitcher() {
     }
 
     const currentLocale = localeConfig[locale];
+    const CurrentFlag = FlagComponents[locale];
 
     return (
         <div className="relative" ref={dropdownRef}>
@@ -42,14 +50,14 @@ export default function LocaleSwitcher() {
                 disabled={isPending}
                 className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/50 border border-slate-700 
                    hover:bg-slate-700/50 hover:border-slate-600 transition-all duration-200
-                   disabled:opacity-50 disabled:cursor-wait cursor-pointer"
+                   disabled:opacity-50 disabled:cursor-wait cursor-pointer group"
                 aria-label={t('language.select')}
                 aria-expanded={isOpen}
                 aria-haspopup="listbox"
             >
-                <span className="text-lg" role="img" aria-label={currentLocale.name}>
-                    {currentLocale.flag}
-                </span>
+                <div className="w-6 h-6 rounded-full shadow-sm group-hover:shadow transition-shadow">
+                    <CurrentFlag className="w-full h-full" />
+                </div>
                 <span className="text-sm font-medium text-slate-200">
                     {currentLocale.nativeName}
                 </span>
@@ -74,6 +82,7 @@ export default function LocaleSwitcher() {
                     {locales.map((loc) => {
                         const config = localeConfig[loc];
                         const isActive = loc === locale;
+                        const Flag = FlagComponents[loc];
 
                         return (
                             <button
@@ -89,9 +98,9 @@ export default function LocaleSwitcher() {
                                     }
                   disabled:cursor-default`}
                             >
-                                <span className="text-lg" role="img" aria-label={config.name}>
-                                    {config.flag}
-                                </span>
+                                <div className="w-6 h-6 rounded-full shadow-sm">
+                                    <Flag className="w-full h-full" />
+                                </div>
                                 <span className="flex-1 text-sm font-medium">
                                     {config.nativeName}
                                 </span>

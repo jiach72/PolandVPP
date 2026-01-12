@@ -1,55 +1,51 @@
-import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import { Inter } from 'next/font/google';
-import '../globals.css';
-import { locales, localeNames, type Locale } from '@/i18n';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/config';
+import type { Metadata } from "next";
+// import localFont from "next/font/local"; // 假设之前没有用 localFont 或者用了默认的 global.css
+import "../globals.css"; // 确保引入全局样式
 
-const inter = Inter({ subsets: ['latin', 'latin-ext'] });
+// const geistSans = localFont({
+//   src: "../fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "../fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
 
-export function generateStaticParams() {
-    return locales.map((locale) => ({ locale }));
-}
-
-export async function generateMetadata({
-    params,
-}: {
-    params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-    const { locale } = await params;
-
-    const titles: Record<Locale, string> = {
-        pl: 'PSE NextGen VPP - Wirtualna Elektrownia',
-        en: 'PSE NextGen VPP - Virtual Power Plant',
-        zh: 'PSE NextGen VPP - 虚拟电厂平台',
-    };
-
-    const descriptions: Record<Locale, string> = {
-        pl: 'Platforma zarządzania wirtualną elektrownią dla polskiego systemu energetycznego',
-        en: 'Virtual Power Plant management platform for the Polish energy system',
-        zh: '波兰能源系统虚拟电厂管理平台',
-    };
-
-    return {
-        title: titles[locale as Locale] || titles.pl,
-        description: descriptions[locale as Locale] || descriptions.pl,
-    };
-}
+export const metadata: Metadata = {
+    title: "PSE NextGen VPP Platform",
+    description: "Virtual Power Plant Platform for Polish Power Grid",
+};
 
 export default async function LocaleLayout({
     children,
-    params,
+    params
 }: {
     children: React.ReactNode;
     params: Promise<{ locale: string }>;
 }) {
     const { locale } = await params;
-    const messages = await getMessages({ locale });
+
+    // Ensure that the incoming `locale` is valid
+    if (!routing.locales.includes(locale as any)) {
+        notFound();
+    }
+
+    // Providing all messages to the client
+    // side is the easiest way to get started
+    const messages = await getMessages();
 
     return (
-        <html lang={locale} className="dark">
-            <body className={`${inter.className} bg-slate-900 text-white antialiased`}>
-                <NextIntlClientProvider locale={locale} messages={messages}>
+        <html lang={locale}>
+            <body
+                className={`bg-slate-900 text-slate-100 antialiased`}
+            >
+                <NextIntlClientProvider messages={messages}>
                     {children}
                 </NextIntlClientProvider>
             </body>

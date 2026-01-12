@@ -1,3 +1,5 @@
+import { defineRouting } from 'next-intl/routing';
+
 // i18n 核心配置
 // 支持语言：波兰语(默认)、英语、中文
 
@@ -5,6 +7,12 @@ export const locales = ['pl', 'en', 'zh'] as const;
 export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = 'pl';
+
+export const routing = defineRouting({
+  locales,
+  defaultLocale,
+  localePrefix: 'always'
+});
 
 // 语言显示名称和国旗
 export const localeConfig: Record<Locale, { name: string; nativeName: string; flag: string }> = {
@@ -37,6 +45,7 @@ export const dateTimeConfig = {
     short: { hour: '2-digit', minute: '2-digit' } as const,
     medium: { hour: '2-digit', minute: '2-digit', second: '2-digit' } as const,
   },
+  // currency removed here, passed separately if needed or just use number format
 };
 
 // 货币配置（波兰兹罗提）
@@ -56,5 +65,3 @@ export const namespaces = [
 ] as const;
 
 export type Namespace = (typeof namespaces)[number];
-
-export const localeNames = localeConfig;

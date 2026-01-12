@@ -36,9 +36,7 @@
         "downRegulation": "Regulacja w dół",
         "dayAhead": "Day-Ahead",
         "intraday": "Intraday",
-        "balancing": "Bilansujący",
-        "maxPrice": "Cena maksymalna",
-        "minPrice": "Cena minimalna"
+        "balancing": "Bilansujący"
     },
     "dam": {
         "title": "Rynek dnia następnego (DAM)",

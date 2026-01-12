@@ -1,8 +1,4 @@
-import { createSharedPathnamesNavigation } from 'next-intl/navigation';
-import { locales, defaultLocale } from './config';
+import { createNavigation } from 'next-intl/navigation';
+import { routing } from './config';
 
-// 创建本地化导航工具
-export const { Link, redirect, usePathname, useRouter } = createSharedPathnamesNavigation({
-    locales,
-    localePrefix: 'always',
-});
+export const { Link, redirect, usePathname, useRouter } = createNavigation(routing);

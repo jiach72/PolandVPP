@@ -29,8 +29,7 @@
         "owner": "所有者",
         "aggregator": "聚合商",
         "registrationDate": "注册日期",
-        "lastMaintenance": "上次维护",
-        "totalAssets": "资产总数"
+        "lastMaintenance": "上次维护"
     },
     "capacity": {
         "nominal": "额定容量",

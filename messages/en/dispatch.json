@@ -74,5 +74,8 @@
         "week": "This Week",
         "planned": "Planned",
         "executed": "Executed"
+    },
+    "commands": {
+        "title": "Command Simulation"
     }
 }

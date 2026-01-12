@@ -2,20 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 
-interface StatCardProps {
-    title: string;
-    value: string | number;
-    unit?: string;
-    trend?: {
-        value: number;
-        direction: 'up' | 'down' | 'neutral';
-    };
-    icon?: React.ReactNode;
-    color?: 'blue' | 'green' | 'amber' | 'purple' | 'cyan' | 'red';
-}
-
-export default function StatCard({ title, value, unit, trend, icon, color = 'blue' }: StatCardProps) {
-    const colorClasses = {
+export function StatCard({ title, value, unit, trend, icon, color = 'blue' }: any) {
+    const colorClasses: any = {
         blue: 'from-blue-500/10 to-blue-600/5 border-blue-500/20 text-blue-300',
         green: 'from-green-500/10 to-green-600/5 border-green-500/20 text-green-300',
         amber: 'from-amber-500/10 to-amber-600/5 border-amber-500/20 text-amber-300',
@@ -24,7 +12,7 @@ export default function StatCard({ title, value, unit, trend, icon, color = 'blu
         red: 'from-red-500/10 to-red-600/5 border-red-500/20 text-red-300',
     };
 
-    const trendColors = {
+    const trendColors: any = {
         up: 'text-green-400',
         down: 'text-red-400',
         neutral: 'text-slate-400',
@@ -55,44 +43,6 @@ export default function StatCard({ title, value, unit, trend, icon, color = 'blu
                     <span>{trend.value > 0 ? '+' : ''}{trend.value}%</span>
                 </div>
             )}
-        </div>
-    );
-}
-
-// 频率指示器组件
-export function FrequencyIndicator({ frequency, target = 50.00 }: { frequency: number; target?: number }) {
-    const t = useTranslations('dashboard');
-    const deviation = frequency - target;
-    const isNormal = Math.abs(deviation) < 0.05;
-    const isWarning = Math.abs(deviation) >= 0.05 && Math.abs(deviation) < 0.2;
-
-    const statusColor = isNormal ? 'green' : isWarning ? 'amber' : 'red';
-    const statusText = isNormal ? t('frequency.normal') : isWarning ? t('frequency.warning') : t('frequency.critical');
-
-    const colorClasses = {
-        green: 'bg-green-500/20 border-green-500/30 text-green-400',
-        amber: 'bg-amber-500/20 border-amber-500/30 text-amber-400',
-        red: 'bg-red-500/20 border-red-500/30 text-red-400',
-    };
-
-    return (
-        <div className={`p-6 rounded-xl ${colorClasses[statusColor]} border`}>
-            <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-white">{t('frequency.title')}</h3>
-                <span className={`px-3 py-1 rounded-full text-xs font-medium ${colorClasses[statusColor]}`}>
-                    {statusText}
-                </span>
-            </div>
-            <div className="text-center py-4">
-                <p className="text-5xl font-bold text-white">{frequency.toFixed(3)}</p>
-                <p className="text-slate-400 mt-1">Hz</p>
-            </div>
-            <div className="flex justify-between text-sm text-slate-400 mt-4">
-                <span>{t('frequency.target')}: {target.toFixed(2)} Hz</span>
-                <span className={deviation >= 0 ? 'text-green-400' : 'text-red-400'}>
-                    {t('frequency.deviation')}: {deviation >= 0 ? '+' : ''}{(deviation * 1000).toFixed(1)} mHz
-                </span>
-            </div>
         </div>
     );
 }
@@ -153,3 +103,5 @@ export function AlertList({ alerts }: { alerts: Array<{ id: string; level: 'crit
         </div>
     );
 }
+
+export default StatCard;

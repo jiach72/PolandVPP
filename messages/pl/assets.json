@@ -29,8 +29,7 @@
         "owner": "Właściciel",
         "aggregator": "Agregator",
         "registrationDate": "Data rejestracji",
-        "lastMaintenance": "Ostatni przegląd",
-        "totalAssets": "Łączna liczba zasobów"
+        "lastMaintenance": "Ostatni przegląd"
     },
     "capacity": {
         "nominal": "Moc nominalna",

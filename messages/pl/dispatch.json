@@ -74,5 +74,8 @@
         "week": "Ten tydzień",
         "planned": "Zaplanowane",
         "executed": "Wykonane"
+    },
+    "commands": {
+        "title": "Symulacja poleceń"
     }
 }
