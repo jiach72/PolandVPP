@@ -5,6 +5,7 @@ import { routing } from '@/i18n/config';
 import type { Metadata } from "next";
 import "../globals.css";
 import { Toaster } from 'sonner';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
     title: "PSE NextGen VPP Platform",
@@ -39,6 +40,7 @@ export default async function LocaleLayout({
                 <NextIntlClientProvider messages={messages}>
                     {children}
                 </NextIntlClientProvider>
+                <SpeedInsights />
             </body>
         </html>
     );
